@@ -1,0 +1,58 @@
+{
+  "ooo_cpu": [
+    {
+      "rob_size": 96,
+      "lq_size": 72,
+      "sq_size": 56,
+      "fetch_width": 4,
+      "decode_width": 4,
+      "dispatch_width": 4,
+      "execute_width": 4,
+      "retire_width": 4,
+      "branch_predictor": "hashed_perceptron",
+      "btb": "basic_btb"
+    }
+  ],
+  "L1I": {
+    "sets": 64,
+    "ways": 8,
+    "latency": 4,
+    "mshr_size": 8,
+    "replacement": "lru",
+    "prefetcher": "no"
+  },
+  "L1D": {
+    "sets": 64,
+    "ways": 8,
+    "latency": 4,
+    "mshr_size": 16,
+    "replacement": "lru",
+    "prefetcher": "no"
+  },
+  "L2C": {
+    "sets": 512,
+    "ways": 8,
+    "latency": 12,
+    "mshr_size": 16,
+    "replacement": "lru",
+    "prefetcher": "chimera"
+  },
+  "LLC": {
+    "sets": 2048,
+    "ways": 16,
+    "latency": 20,
+    "mshr_size": 32,
+    "replacement": "ship",
+    "prefetcher": "no"
+  },
+  "physical_memory": {
+    "data_rate": 3200,
+    "channels": 1,
+    "tCAS": 16,
+    "tRCD": 16,
+    "tRP": 16,
+    "tRAS": 52
+  },
+  "block_size": 64,
+  "page_size": 8192
+}
