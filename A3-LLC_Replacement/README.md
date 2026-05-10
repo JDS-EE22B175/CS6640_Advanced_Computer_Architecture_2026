@@ -60,6 +60,5 @@ To run any of the historical or alternate variants in this repository:
 ## Results & Logs
 Raw simulation logs (`.txt`) for traces T1-T4 are included inside the respective policy folders or the `results/` directory.
 
-We have also included our automated data pipeline scripts:
-*   `compare_all_results.py`: Generates the master global leaderboard.
-*   `compare_by_policy.py`: Generates isolated CSV leaderboards for individual policy architectures.
+We have streamlined our data pipeline into a single, automated script:
+*   `parse_logs.py`: Running this script from the root directory will automatically crawl through the `replacement/` folder, find all raw `.txt` simulation logs, extract all relevant KPIs (IPC, Hits, Misses, etc.), and generate both the `A3_Results.xlsx` master spreadsheet and the `Policy_Leaderboard.csv` file directly.
